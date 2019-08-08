@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyVet.Web.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -40,6 +41,10 @@ namespace MyVet.Web.Date.Entities
         public string FullName => $"{FirstName}{LastName}";
 
         public string FullNameWithDocument => $"{FirstName}{LastName}- {Document}";
+
+
+        public ICollection<Pet> Pets { get; set; }
+        public ICollection<Agenda> Agendas  { get; set; }
 
 
 
